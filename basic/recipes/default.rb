@@ -15,13 +15,3 @@ group "www-data" do
   members "ifunny"
   append true
 end
-
-# install nginx
-include_recipe 'nginx'
-
-
-
-package "php5-fpm" do
-  action :install
-end
-
