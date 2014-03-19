@@ -5,9 +5,10 @@
 #
 
 # create new user
-user_account "ifunny" do
-  ssh_keys "TEST-KEY"
+user "ifunny" do
+  username "ifunny"
 end
+
 
 # add user to www-data group
 group "www-data" do
