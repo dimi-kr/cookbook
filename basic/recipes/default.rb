@@ -6,9 +6,14 @@
 
 include_recipe "python::default"
 
+python_pip "setuptools" do
+  action :upgrade
+end
+
 python_pip "celery" do
   action :install
 end
+
 # create new user
 user "ifunny" do
   username "ifunny"
