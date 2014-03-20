@@ -20,14 +20,13 @@ user "ifunny" do
   username "ifunny"
 end
 
-yum_repository 'rpmfusion-free' do
-  description "RPMFusion free Stable repo"
-  baseurl "http://download1.rpmfusion.org/free/fedora/releases/16/Everything/x86_64/os/"
+yum_repository 'atrpms' do
+  description "Fedora Core $releasever - $basearch - ATrpms"
+  baseurl "http://dl.atrpms.net/el$releasever-$basearch/atrpms/stable"
   action :create
+  gpgkey 'http://ATrpms.net/RPM-GPG-KEY.atrpms'
+  gpgcheck true
 end
 
-yum_repository 'rpmfusion-nonfree' do
-  description "RPMFusion nonfree Stable repo"
-  baseurl "http://download1.rpmfusion.org/nonfree/fedora/releases/16/Everything/x86_64/os/"
-  action :create
-end
+
+package "ffmpeg"
