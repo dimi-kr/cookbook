@@ -5,11 +5,9 @@
 #
 
 include_recipe "python::default"
-include_recipe "python::package"
-include_recipe "python::pip"
 
-package "celery" do
-  provider Chef::Provider::PythonPip
+python_pip "celery" do
+  action :install
 end
 # create new user
 user "ifunny" do
