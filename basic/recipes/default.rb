@@ -29,4 +29,4 @@ yum_repository 'atrpms' do
 end
 
 
-package "ffmpeg"
+package "ffmpeg2"
