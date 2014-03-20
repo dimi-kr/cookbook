@@ -22,11 +22,11 @@ end
 
 yum_repository 'atrpms' do
   description "Fedora Core $releasever - $basearch - ATrpms"
-  baseurl "http://dl.atrpms.net/el$releasever-$basearch/atrpms/stable"
+  baseurl "http://dl.atrpms.net/el6.9-$basearch/atrpms/stable"
   action :create
   gpgkey 'http://ATrpms.net/RPM-GPG-KEY.atrpms'
   gpgcheck true
 end
 
 
-package "ffmpeg2"
+package "ffmpeg"
