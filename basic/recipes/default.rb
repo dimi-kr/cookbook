@@ -8,7 +8,9 @@ include_recipe "python::default"
 include_recipe "python::package"
 include_recipe "python::pip"
 
-python_pip "celery"
+package "celery" do
+  provider Chef::Provider::PythonPip
+end
 # create new user
 user "ifunny" do
   username "ifunny"
