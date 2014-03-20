@@ -24,8 +24,6 @@ supports 'scientific'
 supports 'suse'
 supports 'windows'
 
-depends 'openssl',         '~> 1.1'
-depends 'build-essential', '~> 1.4'
 
 
 # remove all these attributes from metadata?
